@@ -24,7 +24,9 @@ with open(os.path.join(here, 'README.md')) as f:
 requires = [
     # For the time being, this is required by django_wsgi
     'django<1.10',
-    'django-oauth-toolkit',
+    # django-oauth-toolkit 1.0 requires django >= 1.10
+    # So pin the version for now
+    'django-oauth-toolkit<1.0',
     'psycopg2',
     'django-wsgi',
     'ContrailOnlineCAService',
